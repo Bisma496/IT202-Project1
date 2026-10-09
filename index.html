@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moving On Up | Representative Portal</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <section class="intro" aria-label="Moving On Up introduction">
+      <div class="brand"><span class="brand-icon" aria-hidden="true">↗</span> MOVING ON UP <span class="brand-small">MOU</span></div>
+      <p class="eyebrow">REPRESENTATIVE ACCESS PORTAL</p>
+      <h1>Making every move<br><em>a better one.</em></h1>
+      <p class="intro-copy">Manage client moves, schedule services, and keep every relocation on track—all in one place.</p>
+      <div class="truck-art" aria-hidden="true"><div class="truck-box"><span>MOU</span><small>MOVING ON UP</small></div><div class="truck-cab"><div class="truck-window"></div></div><div class="wheel left"></div><div class="wheel right"></div><div class="road"></div></div>
+      <p class="footnote">Reliable moves. Thoughtful service.</p>
+    </section>
+    <section class="form-card" aria-labelledby="form-heading">
+      <p class="eyebrow form-eyebrow">SECURE STAFF ACCESS</p>
+      <h2 id="form-heading">Welcome back.</h2>
+      <p class="form-subtitle">Enter your representative details to continue.</p>
+      <form id="representativeForm" novalidate>
+        <div class="two-col">
+          <div class="field"><label for="firstName">First name <span>*</span></label><input id="firstName" name="firstName" type="text" placeholder="e.g. Jordan" autocomplete="given-name"></div>
+          <div class="field"><label for="lastName">Last name <span>*</span></label><input id="lastName" name="lastName" type="text" placeholder="e.g. Parker" autocomplete="family-name"></div>
+        </div>
+        <div class="field"><label for="password">Password <span>*</span></label><div class="password-wrap"><input id="password" name="password" type="password" placeholder="Enter your password" autocomplete="off"><button type="button" id="togglePassword" class="toggle-password" aria-label="Show password" aria-pressed="false"><span id="eyeIcon" aria-hidden="true">◉</span></button></div><small>Max 7 characters; starts with a special character and includes an uppercase letter and a digit.</small></div>
+        <div class="two-col">
+          <div class="field"><label for="representativeId">Representative ID <span>*</span></label><input id="representativeId" name="representativeId" type="text" inputmode="numeric" placeholder="4-digit ID"></div>
+          <div class="field"><label for="phone">Phone with extension <span>*</span></label><input id="phone" name="phone" type="text" placeholder="201-555-0101 ext 123"></div>
+        </div>
+        <div class="field"><label for="email">Email address <span id="emailRequired" class="hidden">*</span></label><input id="email" name="email" type="text" placeholder="name@example.com"><small>Required only when email confirmation is requested.</small></div>
+        <label class="check-row" for="emailConfirmation"><input type="checkbox" id="emailConfirmation" name="emailConfirmation"><span>Request an email confirmation for this transaction</span></label>
+        <div class="field"><label for="transaction">Select a transaction <span>*</span></label><select id="transaction" name="transaction"><option value="">Choose a transaction...</option><option>Search A Moving Representative's Accounts</option><option>Book a Client's Moving Event</option><option>Cancel A Client's Moving Event</option><option>Request Moving Services</option><option>Request Additional Moving Services</option><option>Create A New Client Account</option></select></div>
+        <div class="actions"><input type="submit" id="submitButton" name="submitButton" value="Access portal →"><input type="reset" id="resetButton" name="resetButton" value="Reset form"></div>
+      </form>
+      <p class="privacy">🔒 For authorized Moving On Up representatives only.</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

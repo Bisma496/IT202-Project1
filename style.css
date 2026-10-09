@@ -1,0 +1,574 @@
+
+/* ==========================================
+   IT 202 - Project 1
+   Moving On Up (MOU)
+   Main Stylesheet
+========================================== */
+
+
+/* ==========================================
+   1. GLOBAL VARIABLES
+========================================== */
+
+:root {
+  --ink: #172a3c;
+  --muted: #64758a;
+  --teal: #117f86;
+  --deep: #075f68;
+  --border: #dce5e9;
+  --paper: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #e9f0f1;
+  color: var(--ink);
+}
+
+
+/* ==========================================
+   2. MAIN PAGE LAYOUT
+========================================== */
+
+.page-shell {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.95fr) minmax(400px, 1.05fr);
+  min-height: 100vh;
+  max-width: 1500px;
+  margin: auto;
+}
+
+
+/* ==========================================
+   3. INTRODUCTION SECTION
+========================================== */
+
+.intro {
+  position: relative;
+  overflow: hidden;
+
+  padding: 58px clamp(30px, 5vw, 85px);
+
+  background: linear-gradient(
+    155deg,
+    #103d4b 0%,
+    #126d72 65%,
+    #1e8b8d 100%
+  );
+
+  color: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* ==========================================
+   4. COMPANY BRANDING
+========================================== */
+
+.brand {
+  font-size: 19px;
+  font-weight: 900;
+  letter-spacing: 2px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-icon {
+  display: inline-grid;
+  place-items: center;
+
+  width: 37px;
+  height: 37px;
+
+  background: #d8f4dd;
+  color: #0c5e60;
+
+  border-radius: 11px;
+  font-size: 27px;
+}
+
+.brand-small {
+  font-size: 10px;
+  opacity: 0.7;
+  letter-spacing: 1px;
+  margin-left: auto;
+}
+
+
+/* ==========================================
+   5. INTRODUCTION TEXT
+========================================== */
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 2.2px;
+  font-weight: 800;
+
+  margin-top: 95px;
+  color: #b2e7dc;
+}
+
+.intro h1 {
+  font-size: clamp(37px, 4vw, 60px);
+  line-height: 1.12;
+  letter-spacing: -2px;
+
+  margin: 20px 0;
+}
+
+.intro h1 em {
+  font-style: normal;
+  color: #b7eed9;
+}
+
+.intro-copy {
+  font-size: 16px;
+  line-height: 1.8;
+
+  color: #d4e8e7;
+  max-width: 440px;
+}
+
+
+/* ==========================================
+   6. MOVING TRUCK ILLUSTRATION
+========================================== */
+
+.truck-art {
+  position: relative;
+
+  width: min(100%, 450px);
+  height: 230px;
+
+  margin: auto auto 15px;
+  flex-shrink: 0;
+}
+
+/* Main truck container */
+
+.truck-box {
+  position: absolute;
+
+  left: 5%;
+  bottom: 58px;
+
+  width: 62%;
+  height: 135px;
+
+  background: linear-gradient(
+    130deg,
+    #e2f7f3,
+    #b9e6db
+  );
+
+  border-radius: 13px 8px 4px 4px;
+
+  box-shadow: 0 14px 20px #002a3350;
+
+  color: #0a6870;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 44px;
+  font-weight: 900;
+  letter-spacing: -3px;
+}
+
+.truck-box small {
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+/* Truck cabin */
+
+.truck-cab {
+  position: absolute;
+
+  left: 65%;
+  bottom: 58px;
+
+  width: 30%;
+  height: 103px;
+
+  background: #f8c875;
+
+  border-radius: 12px 27px 5px 0;
+
+  clip-path: polygon(
+    0 0,
+    68% 0,
+    100% 43%,
+    100% 100%,
+    0 100%
+  );
+}
+
+/* Truck window */
+
+.truck-window {
+  position: absolute;
+
+  top: 13px;
+  left: 17px;
+
+  width: 62%;
+  height: 37px;
+
+  background: #2d7889;
+  border-radius: 5px 14px 3px 3px;
+}
+
+/* Truck wheels */
+
+.wheel {
+  position: absolute;
+
+  bottom: 36px;
+
+  width: 47px;
+  height: 47px;
+
+  border-radius: 50%;
+
+  background: #203745;
+  border: 10px solid #142c38;
+
+  box-shadow: inset 0 0 0 9px #aabcc1;
+
+  z-index: 2;
+}
+
+.wheel.left {
+  left: 19%;
+}
+
+.wheel.right {
+  left: 77%;
+}
+
+/* Road below truck */
+
+.road {
+  position: absolute;
+
+  bottom: 20px;
+  left: 0;
+
+  width: 100%;
+  height: 7px;
+
+  background: #ffffff45;
+  border-radius: 20px;
+}
+
+.footnote {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #c2e1df;
+}
+
+
+/* ==========================================
+   7. LOGIN FORM CONTAINER
+========================================== */
+
+.form-card {
+  background: var(--paper);
+
+  padding: 46px clamp(25px, 5vw, 80px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-eyebrow {
+  margin: 0 0 13px;
+  color: var(--teal);
+}
+
+h2 {
+  font-size: 38px;
+  letter-spacing: -1.4px;
+  margin: 0;
+}
+
+.form-subtitle {
+  color: var(--muted);
+  margin: 12px 0 30px;
+  font-size: 14px;
+}
+
+
+/* ==========================================
+   8. FORM STRUCTURE
+========================================== */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.field label {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.field label span {
+  color: #cf6346;
+}
+
+
+/* ==========================================
+   9. INPUT FIELDS AND DROPDOWN
+========================================== */
+
+input:not([type=checkbox]):not([type=submit]):not([type=reset]),
+select {
+  width: 100%;
+
+  border: 1px solid var(--border);
+  background: #f9fbfc;
+
+  border-radius: 8px;
+
+  padding: 12px 13px;
+
+  font-size: 13px;
+  color: var(--ink);
+
+  outline: none;
+  min-height: 43px;
+}
+
+/* Highlight active input */
+
+input:focus,
+select:focus {
+  border-color: var(--teal) !important;
+  box-shadow: 0 0 0 3px #117f8620;
+}
+
+/* Placeholder text */
+
+input::placeholder {
+  color: #a1acb7;
+}
+
+/* Small instructions under fields */
+
+.field small {
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+
+/* ==========================================
+   10. PASSWORD VISIBILITY BUTTON
+========================================== */
+
+.password-wrap {
+  position: relative;
+}
+
+.password-wrap input {
+  padding-right: 50px !important;
+}
+
+.toggle-password {
+  position: absolute;
+
+  right: 7px;
+  top: 5px;
+
+  border: 0;
+  background: transparent;
+
+  cursor: pointer;
+
+  color: var(--teal);
+  font-size: 21px;
+
+  width: 34px;
+  height: 34px;
+}
+
+
+/* ==========================================
+   11. EMAIL CONFIRMATION CHECKBOX
+========================================== */
+
+.check-row {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 10px;
+
+  font-size: 12px;
+  color: #3d5361;
+
+  cursor: pointer;
+}
+
+.check-row input {
+  accent-color: var(--teal);
+  margin: 0;
+}
+
+
+/* ==========================================
+   12. SUBMIT AND RESET BUTTONS
+========================================== */
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.actions input {
+  cursor: pointer;
+
+  border-radius: 8px;
+  border: 0;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  padding: 14px 20px;
+}
+
+/* Submit button */
+
+.actions input[type=submit] {
+  background: var(--teal);
+  color: white;
+  flex: 1;
+}
+
+.actions input[type=submit]:hover {
+  background: var(--deep);
+}
+
+/* Reset button */
+
+.actions input[type=reset] {
+  background: #edf3f3;
+  color: #385965;
+}
+
+
+/* ==========================================
+   13. PRIVACY MESSAGE
+========================================== */
+
+.privacy {
+  color: #82929e;
+  font-size: 11px;
+
+  text-align: center;
+  margin-top: 30px;
+}
+
+.hidden {
+  display: none;
+}
+
+
+/* ==========================================
+   14. RESPONSIVE DESIGN - TABLETS
+========================================== */
+
+@media (max-width: 800px) {
+
+  .page-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .intro {
+    min-height: 360px;
+    padding: 25px;
+  }
+
+  .intro .eyebrow {
+    margin-top: 32px;
+  }
+
+  .intro h1 {
+    font-size: 38px;
+  }
+
+  .truck-art {
+    display: none;
+  }
+
+  .footnote {
+    margin-top: 20px;
+  }
+
+  .form-card {
+    padding: 36px 25px;
+  }
+
+}
+
+
+/* ==========================================
+   15. RESPONSIVE DESIGN - PHONES
+========================================== */
+
+@media (max-width: 440px) {
+
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+}
+
+
+/* ==========================================
+   16. BACKGROUND IMAGE FOR LOGIN FORM
+========================================== */
+
+.form-card {
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.90),
+      rgba(255, 255, 255, 0.90)
+    ),
+    url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
