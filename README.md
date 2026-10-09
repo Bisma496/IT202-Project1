@@ -35,3 +35,7 @@ Open `index.html` in a web browser. Keep all three files together in the same fo
 4. Submit the AFS page URL, the source files, and your GitHub repository URL in Canvas, as directed by the instructor.
 
 **Note:** This is a front-end classroom demonstration. Employee credentials are fictional and stored in browser-accessible JavaScript. It is not suitable for real authentication or real client information.
+
+## Live Website
+
+https://web.njit.edu/~bt336/MOU_Project1/index.html
